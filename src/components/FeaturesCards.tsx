@@ -48,13 +48,7 @@ export function FeaturesCards() {
   ));
 
   return (
-    <Container size="lg" py="xl">
-      <Group justify="center">
-        <Badge variant="filled" size="lg">
-          Best company ever
-        </Badge>
-      </Group>
-
+    <Container size="lg" py="xl">     
       <Title order={2} className={classes.title} ta="center" mt="sm">
         Integrate effortlessly with any technology stack
       </Title>
