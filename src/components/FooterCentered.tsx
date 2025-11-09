@@ -51,14 +51,12 @@ export function FooterCentered() {
             </div>
           </Grid.Col>
           
-          {/* Links - centered on mobile, centered on desktop */}
           <Grid.Col span={{ base: 12, sm: 4 }}>
             <Group className={classes.links} justify="center" >
               {items}
             </Group>
           </Grid.Col>
           
-          {/* Social Icons - centered on mobile, right on desktop */}
           <Grid.Col span={{ base: 12, sm: 4 }}>
             <Group gap="sm" justify={isMobile ? 'center' : 'flex-end'}>
               <a 

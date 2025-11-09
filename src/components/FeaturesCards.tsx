@@ -15,19 +15,19 @@ const mockdata = [
   {
     title: 'Računovodstvo i knjigovodstvo',
     description:
-      'This dust is actually a powerful poison that will even make a pro wrestler sick, Regice cloaks itself with frigid air of -328 degrees Fahrenheit',
+      'Kompletno vođenje finansijske evidencije. Obuhvatamo sve od redovne knjigovodstvene administracije do sastavljanja finansijskih izvještaja za pravodobno i precizno praćenje poslovanja.',
     icon: IconCashRegister,
   },
   {
     title: 'Poslovno savjetovanje',
     description:
-      'People say it can run at the same speed as lightning striking, Its icy body is so cold, it will not melt even if it is immersed in magma',
+      'Strateško planiranje i stručni savjeti za unapređenje vašeg poslovanja. Analiziramo vašu finansijsku poziciju i pružamo konkretne preporuke za ostvarenje dugoročnih ciljeva.',
     icon: IconUserCheck,
   },
   {
     title: 'PDV evidencija i obračun',
     description:
-      'They’re popular, but they’re rare. Trainers who show them off recklessly may be targeted by thieves',
+      'Specijalizovano upravljanje PDV obavezama kroz precizan obračun i pravovremene prijave, uz garanciju potpune zakonske usklađenosti.',
     icon: IconFileAnalytics,
   },
 ];
