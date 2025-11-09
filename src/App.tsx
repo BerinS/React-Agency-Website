@@ -2,10 +2,7 @@ import '@mantine/core/styles.css';
 import Home from './pages/Home';
 import { HeaderMegaMenu } from './components/HeaderMegaMenu';
 import { MantineProvider, AppShell  } from '@mantine/core';
-import {RemoveScrollBar} from 'react-remove-scroll-bar';
-
-
-
+import {FooterCentered} from './components/FooterCentered';
 
 function App() {
   return (
@@ -20,8 +17,9 @@ function App() {
         
         <AppShell.Main>
           <Home />
+          <FooterCentered />
         </AppShell.Main>
-
+       
       </AppShell>
     </MantineProvider>
   );
