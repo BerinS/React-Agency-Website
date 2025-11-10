@@ -1,8 +1,18 @@
-import { IconFileAnalytics, IconGauge, IconUserCheck, IconCashRegister } from '@tabler/icons-react';
+import { 
+  IconFileAnalytics,
+  IconClipboardData, 
+  IconUserCheck, 
+  IconCashRegister, 
+  IconGavel, 
+  IconNotebook,
+  IconChevronRight,
+ } from '@tabler/icons-react';
 import {
   Badge,
+  Button,
   Card,
   Container,
+  Flex,
   Group,
   SimpleGrid,
   Text,
@@ -16,7 +26,7 @@ const mockdata = [
     title: 'Računovodstvo i knjigovodstvo',
     description:
       'Kompletno vođenje finansijske evidencije. Obuhvatamo sve od redovne knjigovodstvene administracije do sastavljanja finansijskih izvještaja za pravodobno i precizno praćenje poslovanja.',
-    icon: IconCashRegister,
+    icon: IconNotebook,
   },
   {
     title: 'Poslovno savjetovanje',
@@ -29,6 +39,24 @@ const mockdata = [
     description:
       'Specijalizovano upravljanje PDV obavezama kroz precizan obračun i pravovremene prijave, uz garanciju potpune zakonske usklađenosti.',
     icon: IconFileAnalytics,
+  },
+  {
+    title: 'Finansijski izvještaji',
+    description:
+      'Izrada jasnih i pouzdanih finansijskih izvještaja u skladu sa važećim regulatornim standardima. Pružamo detaljnu analizu finansijskog stanja vaše kompanije za donošenje informiranih poslovnih odluka.',
+    icon: IconClipboardData,
+  },
+  {
+    title: 'Registracija djelatnosti',
+    description:
+      'Registraciji pri osnivanju pravnih lica, uključujući pripremu dokumentacije i savjetovanje o optimalnom obliku poslovanja za vaše potrebe.',
+    icon: IconGavel,
+  },
+  {
+    title: 'Obračun plaća',
+    description:
+      'Stručan obračun plaća uz potpunu usklađenost sa radnim i poreskim zakonodavstvom. Usluga obuhvata obračun svih doprinosa, poreza i podnošenje izvještaja nadležnim organima.',
+    icon: IconCashRegister,
   },
 ];
 
@@ -64,6 +92,14 @@ export function FeaturesCards() {
       <SimpleGrid cols={{ base: 1, md: 3 }} spacing="xl" mt={50}>
         {features}
       </SimpleGrid>
+
+      <Flex
+        justify={'flex-end'}
+      >
+        <Button variant='transparent' color='#a6161a' rightSection={<IconChevronRight size={14}/>}>Detaljan pregled</Button>
+      </Flex>
+      
+
     </Container>
   );
 }
