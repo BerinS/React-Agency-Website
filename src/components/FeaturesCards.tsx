@@ -17,7 +17,9 @@ import {
   SimpleGrid,
   Text,
   Title,
+  useMantineTheme,
 } from '@mantine/core';
+import { useMediaQuery } from '@mantine/hooks';
 
 import classes from '../css/FeaturesCards.module.css';
 
@@ -61,7 +63,13 @@ const mockdata = [
 ];
 
 export function FeaturesCards() {
-  const features = mockdata.map((feature) => (
+  const theme = useMantineTheme();
+  const isMobile = useMediaQuery(`(max-width: ${theme.breakpoints.sm})`);
+  
+  // 3 cards on mobile
+  const displayedFeatures = isMobile ? mockdata.slice(0, 3) : mockdata;
+
+  const features = displayedFeatures.map((feature) => (
     <Card key={feature.title} shadow="md" radius="md" className={classes.card} padding="xl">
       <feature.icon size={50} stroke={1.5} color='#a6161a' />
       <Text fz="lg" fw={500} className={classes.cardTitle} mt="md">
@@ -95,11 +103,12 @@ export function FeaturesCards() {
 
       <Flex
         justify={'flex-end'}
+        mt={'sm'}
       >
-        <Button variant='transparent' color='#a6161a' rightSection={<IconChevronRight size={14}/>}>Detaljan pregled</Button>
+        <Button variant='transparent' color='#a6161a' rightSection={<IconChevronRight size={14} />}>
+          Detaljan pregled
+        </Button>
       </Flex>
-      
-
     </Container>
   );
 }

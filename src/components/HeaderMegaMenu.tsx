@@ -1,11 +1,11 @@
 import {
-  IconBook,
-  IconChartPie3,
+  IconCashRegister,
   IconChevronDown,
-  IconCode,
-  IconCoin,
-  IconFingerprint,
-  IconNotification,
+  IconClipboardData,
+  IconFileAnalytics,
+  IconGavel,
+  IconNotebook,
+  IconUserCheck,
 } from '@tabler/icons-react';
 import {
   Box,
@@ -31,34 +31,34 @@ import logo from '../assets/Asset_logo_3.png';
 
 const mockdata = [
   {
-    icon: IconCode,
-    title: 'Open source',
-    description: 'This Pokémon’s cry is very loud and distracting',
+    icon: IconNotebook,
+    title: 'Računovodstvo',
+    description: 'Kompletno vođenje finansijske evidencije',
   },
   {
-    icon: IconCoin,
-    title: 'Free for everyone',
-    description: 'The fluid of Smeargle’s tail secretions changes',
+    icon: IconUserCheck,
+    title: 'Poslovno savjetovanje',
+    description: 'Strateško planiranje za unapređenje poslovanja',
   },
   {
-    icon: IconBook,
-    title: 'Documentation',
-    description: 'Yanma is capable of seeing 360 degrees without',
+    icon: IconFileAnalytics,
+    title: 'PDV evidencija',
+    description: 'Upravljanje PDV obavezama i prijave',
   },
   {
-    icon: IconFingerprint,
-    title: 'Security',
-    description: 'The shell’s rounded shape and the grooves on its.',
+    icon: IconClipboardData,
+    title: 'Finansijski izvještaji',
+    description: 'Izrada jasnih finansijskih izvještaja',
   },
   {
-    icon: IconChartPie3,
-    title: 'Analytics',
-    description: 'This Pokémon uses its flying ability to quickly chase',
+    icon: IconGavel,
+    title: 'Registracija',
+    description: 'Registracija pravnih lica i dokumentacija',
   },
   {
-    icon: IconNotification,
-    title: 'Notifications',
-    description: 'Combusken battles with the intensely hot flames it spews',
+    icon: IconCashRegister,
+    title: 'Obračun plaća',
+    description: 'Obračun plaća u skladu sa zakonodavstvom',
   },
 ];
 
@@ -128,13 +128,13 @@ export function HeaderMegaMenu() {
                   <Group justify="space-between">
                     <div>
                       <Text fw={500} fz="sm">
-                        Get started
+                        AssetFin
                       </Text>
                       <Text size="xs" c="dimmed">
-                        Their food sources have decreased, and their numbers
+                        Usluge koje Vam pružaju mir i sigurnost
                       </Text>
                     </div>
-                    <Button variant="default">Get started</Button>
+                    <Button variant="default">Saznaj više</Button>
                   </Group>
                 </div>
               </HoverCard.Dropdown>
@@ -171,23 +171,20 @@ export function HeaderMegaMenu() {
           <Divider my="sm" />
 
           <a href="#" className={classes.link}>
-            Home
+            Početna
           </a>
           <UnstyledButton className={classes.link} onClick={toggleLinks}>
             <Center inline>
               <Box component="span" mr={5}>
-                Features
+                Usluge
               </Box>
               <IconChevronDown size={16} color={theme.colors.red[6]} />
             </Center>
           </UnstyledButton>
           <Collapse in={linksOpened}>{links}</Collapse>
           <a href="#" className={classes.link}>
-            Learn
-          </a>
-          <a href="#" className={classes.link}>
-            Academy
-          </a>
+            O nama
+          </a>          
 
           <Divider my="sm" />
 
