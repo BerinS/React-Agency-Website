@@ -73,7 +73,7 @@ export function HeroContentLeft() {
                 />
 
                 <Title className={classes.title}>
-                  Računovodstvo i poslovno savjetovanje za vaš uspjeh
+                  Računovodstvo i poslovno savjetovanje
                 </Title>
 
                 <Text className={classes.description} mt={30}>

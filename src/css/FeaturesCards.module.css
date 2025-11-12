@@ -36,6 +36,7 @@
   border: 1px solid light-dark(var(--mantine-color-gray-1), var(--mantine-color-dark-5));
   font-family: "DM Sans", sans-serif;
   font-optical-sizing: auto;
+  cursor: pointer;
 }
 
 .cardTitle {
