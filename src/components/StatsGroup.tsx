@@ -7,14 +7,14 @@ import "aos/dist/aos.css";
 
 const data = [
   {
-    title: 'Page views',
-    stats: '456,133',
-    description: '24% more than in the same month last year, 33% more that two years ago',
+    title: 'Godina iskusta',
+    stats: '20',
+    description: 'Preko dvije decenije iskustva u pružanju vrhunskih računovodstvenih usluga',
   },
   {
-    title: 'New users',
-    stats: '2,175',
-    description: '13% less compared to last month, new user engagement up by 6%',
+    title: 'Zadovoljnih klijenata',
+    stats: '200',
+    description: 'Stotine zadovoljnih klijenata koji nam vjeruju',
   },
   {
     title: 'Completed orders',
@@ -69,16 +69,17 @@ export function StatsGroup() {
       <div key={stat.title} className={classes.stat} >
         <Text className={classes.count}>
           <NumberFlow
-            spinTiming={{ duration: 750 , easing: 'ease'}}
-            transformTiming={{ duration: 750, easing: 'ease' }}
-            opacityTiming={{ duration: 750, easing: 'ease' }}
+            spinTiming={{ duration: 900 , easing: 'ease'}}
+            transformTiming={{ duration: 900, easing: 'ease' }}
+            opacityTiming={{ duration: 900, easing: 'ease' }}
             value={isInView ? numericValue : 0}
             format={{ 
               useGrouping: true,
               minimumFractionDigits: 0,
               maximumFractionDigits: 0
-            }}
+            }} 
           />
+          +
         </Text>
         <div data-aos="fade-up">
           <Text className={classes.title}>{stat.title}</Text>
