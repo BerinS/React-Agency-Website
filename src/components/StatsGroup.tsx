@@ -17,9 +17,9 @@ const data = [
     description: 'Stotine zadovoljnih klijenata koji nam vjeruju',
   },
   {
-    title: 'Completed orders',
-    stats: '1,994',
-    description: '1994 orders were completed this month, 97% satisfaction rate',
+    title: 'Ušteđenih sati',
+    stats: '50,000',
+    description: 'Klijentima smo omogućili da se posvete suštini svog poslovanja',
   },
 ];
 

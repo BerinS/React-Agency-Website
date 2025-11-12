@@ -90,7 +90,7 @@ export function FeaturesCards() {
       </Group>
       
       <Title order={2} className={classes.title} ta="center" mt="sm">
-        Usluge koje Vam pružaju mir i sigurnost
+        Usluge koje vam pružaju mir i sigurnost
       </Title>
 
       <Text c="dimmed" className={classes.description} ta="center" mt="md">
