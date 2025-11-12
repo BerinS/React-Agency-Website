@@ -1,5 +1,9 @@
 import { Text } from '@mantine/core';
 import classes from '../css/StatsGroup.module.css';
+import NumberFlow from '@number-flow/react';
+import { useRef, useState, useEffect } from 'react';
+import AOS from 'aos';
+import "aos/dist/aos.css";
 
 const data = [
   {
@@ -19,15 +23,76 @@ const data = [
   },
 ];
 
+const extractNumber = (formattedString: string): number => {
+  return parseInt(formattedString.replace(/,/g, ''), 10);
+};
+
 export function StatsGroup() {
-  const stats = data.map((stat) => (
-    <div key={stat.title} className={classes.stat}>
-      <Text className={classes.count}>{stat.stats}</Text>
-      <Text className={classes.title}>{stat.title}</Text>
-      <Text className={classes.description}>{stat.description}</Text>
+
+  useEffect(() => {
+    AOS.init();
+    AOS.refresh();
+  }, []);
+
+  const [isInView, setIsInView] = useState(false);
+  const ref = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsInView(true);
+        }
+      },
+      {
+        threshold: 0.1,
+        rootMargin: '50px',
+      }
+    );
+
+    const currentRef = ref.current;
+    if (currentRef) {
+      observer.observe(currentRef);
+    }
+
+    return () => {
+      if (currentRef) {
+        observer.unobserve(currentRef);
+      }
+    };
+  }, []);
+
+  const stats = data.map((stat) => {
+    const numericValue = extractNumber(stat.stats);
+
+    return (   
+      <div key={stat.title} className={classes.stat} >
+        <Text className={classes.count}>
+          <NumberFlow
+            spinTiming={{ duration: 750 , easing: 'ease'}}
+            transformTiming={{ duration: 750, easing: 'ease' }}
+            opacityTiming={{ duration: 750, easing: 'ease' }}
+            value={isInView ? numericValue : 0}
+            format={{ 
+              useGrouping: true,
+              minimumFractionDigits: 0,
+              maximumFractionDigits: 0
+            }}
+          />
+        </Text>
+        <div data-aos="fade-up">
+          <Text className={classes.title}>{stat.title}</Text>
+          <Text className={classes.description}>{stat.description}</Text>
+        </div>        
+      </div>
+    );
+  });
+
+  return (
+    <div ref={ref} className={classes.root}>
+      {stats}
     </div>
-  ));
-  return <div className={classes.root}>{stats}</div>;
+  );
 }
 
 export default StatsGroup;

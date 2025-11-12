@@ -1,4 +1,3 @@
-/* Add to your global CSS */
 html {
   scrollbar-width: none; /* Firefox */
   -ms-overflow-style: none; /* IE and Edge */
@@ -6,4 +5,32 @@ html {
 
 html::-webkit-scrollbar {
   display: none; /* Chrome, Safari, Opera */
+}
+
+/* white screen on load */
+body::before {
+  pointer-events: none;
+  -moz-transition: opacity 0.5s ease-in-out;
+  -webkit-transition: opacity 0.5s ease-in-out;
+  -ms-transition: opacity 0.5s ease-in-out;
+  transition: opacity 0.5s ease-in-out;
+  -moz-transition-delay: 0.2s;
+  -webkit-transition-delay: 0.2s;
+  -ms-transition-delay: 0.2s;
+  transition-delay: 0.2s;
+  content: '';
+  background: #ffffff;
+  display: block;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  top: 0;
+  opacity: 1; /* Start visible */
+  z-index: 10005;
+}
+
+/* After page loads, fade out the flash */
+body.loaded::before {
+  opacity: 0;
 }

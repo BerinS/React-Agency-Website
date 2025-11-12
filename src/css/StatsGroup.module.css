@@ -2,10 +2,12 @@
   display: flex;
   background-image: linear-gradient(
     -60deg,
-    var(--mantine-color-blue-4) 0%,
-    var(--mantine-color-blue-7) 100%
+    #94050a 0%,
+    #d60e15 100%
   );
   padding: calc(var(--mantine-spacing-xl) * 1.5);
+  margin-top: calc(var(--mantine-spacing-xl) * 2);
+  margin-bottom: calc(var(--mantine-spacing-xl) * 2);
 
   @media (max-width: 768px) {
     flex-direction: column;

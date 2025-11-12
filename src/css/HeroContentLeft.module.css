@@ -76,6 +76,11 @@
     linear-gradient(to top, #ffffff 0%, transparent 50%) bottom right / 2px 50%;
   background-repeat: no-repeat;
 
+  /* Slide-in animation */
+  opacity: 0;
+  transform: translateX(-60px);
+  animation: slideInFromLeft 0.7s ease-out 0.2s forwards;
+
   @media (max-width: 768px) {
     backdrop-filter: none;
     -webkit-backdrop-filter: none;
@@ -83,6 +88,31 @@
     border: none;
     background:none; 
     padding-left: 20px;
+    /* Reset animation for mobile if needed */
+    transform: translateY(30px);
+    animation: slideInFromBottom 0.6s ease-out 0.3s forwards;
+  }
+}
+
+@keyframes slideInFromLeft {
+  0% {
+    opacity: 0.2;
+    transform: translateX(-60px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInFromBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
@@ -147,4 +177,3 @@
   transform: translateY(-1px);
   box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
 }
-
