@@ -1,0 +1,19 @@
+.wrapper {
+  display: flex;
+  align-items: center;
+  color: #a6161a;
+}
+
+.icon {
+  margin-right: var(--mantine-spacing-md);
+  background-color: transparent;
+}
+
+.title {
+  color: rgb(46, 46, 46);
+  font-weight: 600;
+}
+
+.description {
+  color: rgb(46, 46, 46);
+}
