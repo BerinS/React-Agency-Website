@@ -1,8 +1,13 @@
-import { Container, Grid, SimpleGrid, Skeleton, Title, Text, Image } from '@mantine/core';
+import { Container, Grid, SimpleGrid, Skeleton, Title, Text, Image, Button } from '@mantine/core';
 import image from '../assets/About image.png';
 import classes from '../css/AboutUs.module.css';
+import {
+  IconArrowRight,
+} from '@tabler/icons-react';
 
 const PRIMARY_COL_HEIGHT = '350px';
+  const icon = <IconArrowRight size={20} />;
+
 
 export function AboutBanner() {
   const SECONDARY_COL_HEIGHT = `calc(${PRIMARY_COL_HEIGHT} / 2 - var(--mantine-spacing-md) / 2)`;
@@ -26,36 +31,31 @@ export function AboutBanner() {
             w={{ base: 350, sm: 350, md: 400, lg: 480 }}
             className={classes.image_logo}
           />
-          <Grid gutter="md">
+          <Grid gutter="md"className={classes.about_content} >
             <Grid.Col>         
               <Text mb="sm">
-                AssetFin je vodeća računovodstvena agencija specijalizirana za kompletne 
-                računovodstvene usluge, knjigovodstvo te poslovno i poresko savjetovanje.
+                AssetFin pristup temelji se na individualnom pristupu svakom klijentu, uzimajući u obzir specifičnosti njihove djelatnosti i poslovanja. Naš je cilj da kroz dugoročno partnerstvo doprinesemo ostvarenju vaših poslovnih ciljeva.
+                Osiguravamo da naši klijenti dobiju najviše standarde usluga, u skladu s računovodstvenim standardima, zakonskim propisima i najboljim poslovnim praksama.
               </Text>
-              
-              <Text mb="sm">
-                Naš pristup je personaliziran i prilagođen jedinstvenim potrebama svakog klijenta, 
-                uzimajući u obzir specifičnosti vaše djelatnosti i poslovne modele.
-              </Text>
-              
-              <Text mb="sm">
-                Kroz direktnu i osobnu saradnju, gradimo snažne profesionalne odnose temeljene 
-                na povjerenju, transparentnosti i razmjeni iskustava.
-              </Text>
-              
-              <Text>
-                Naše bogato iskustvo u poslovnim finansijama čini nas pouzdanim partnerom 
-                koji osigurava usklađenost sa računovodstvenim standardima, zakonskim propisima 
-                i najboljim poslovnim praksama, pružajući vam prvorazredne usluge koje doprinose 
-                ostvarenju vaših poslovnih ciljeva.
+
+              <Text mb="sm">                
+                Osobni i izravan odnos sa klijentima smatramo temeljem kvalitetne suradnje, te težimo izgradnji snažnih profesionalnih veza utemeljenih na povjerenju i razumijevanju.
+                Čvrsto vjerujemo da otvorena komunikacija, te razmjena znanja i iskustava predstavljaju ključ uspješne suradnje. Naše bogato iskustvo u području poslovnih financija omogućava nam da pružimo sveobuhvatne usluge koje uključuju računovodstvene, porezne i poslovne savjete kao garanciju učinkovitog i uspješnog poslovanja.
               </Text>
             </Grid.Col>
             <Grid.Col span={6}>
-              <Skeleton height={SECONDARY_COL_HEIGHT} radius="md" animate={false} />
-            </Grid.Col>
-            <Grid.Col span={6}>
-              <Skeleton height={SECONDARY_COL_HEIGHT} radius="md" animate={false} />
-            </Grid.Col>
+              <Button
+                  variant="outline"
+                  color='#6e6e6eff'
+                  size="md"
+                  className={classes.control}
+                  mt={0}                 
+                  radius={"xl"}   
+                  rightSection={icon}  
+                >
+                  Zatražite ponudu
+              </Button>
+            </Grid.Col>            
           </Grid>
         </SimpleGrid>
       </Container>

@@ -37,6 +37,10 @@
   font-family: "DM Sans", sans-serif;
   font-optical-sizing: auto;
   cursor: pointer;
+  transition: box-shadow 0.3s ease;
+}
+.card:hover {
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.2) 0px 8px 16px -8px;  
 }
 
 .cardTitle {

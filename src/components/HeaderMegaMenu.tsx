@@ -71,7 +71,7 @@ export function HeaderMegaMenu() {
     <UnstyledButton className={classes.subLink} key={item.title}>
       <Group wrap="nowrap" align="flex-start">
         <ThemeIcon size={34} variant="default" radius="md">
-          <item.icon size={22} color={theme.colors.red[6]} />
+          <item.icon size={22} color={'#a6161a'} />
         </ThemeIcon>
         <div>
           <Text size="sm" fw={500}>
@@ -108,7 +108,7 @@ export function HeaderMegaMenu() {
                     <Box component="span" mr={5}>
                       Usluge
                     </Box>
-                    <IconChevronDown size={16} color={theme.colors.red[6]} />
+                    <IconChevronDown size={16} color={'#a6161a'} />
                   </Center>
                 </a>
               </HoverCard.Target>
@@ -178,7 +178,7 @@ export function HeaderMegaMenu() {
               <Box component="span" mr={5}>
                 Usluge
               </Box>
-              <IconChevronDown size={16} color={theme.colors.red[6]} />
+              <IconChevronDown size={16} color={'#a6161a'} />
             </Center>
           </UnstyledButton>
           <Collapse in={linksOpened}>{links}</Collapse>
