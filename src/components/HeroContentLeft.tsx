@@ -28,6 +28,12 @@ export function HeroContentLeft() {
     ? 'linear-gradient(0deg, rgba(0, 0, 0, 0) 0%, #00000079 80%)' 
     : 'linear-gradient(250deg, rgba(0, 0, 0, 0) 0%, #00000000 80%)';
 
+    // No tilty on phones
+  let glare : boolean = isMobile ? false : true;
+  let maxGlare : number = isMobile ? 0 : 0.3;
+  let max : number = isMobile ? 0 : 5;
+  let speed : number = isMobile ? 0 : 800;
+
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex((prev) => (prev + 1) % images.length);
@@ -61,7 +67,7 @@ export function HeroContentLeft() {
         px={{ base: 'sm', md: 'xl' }}
       >
         <div className={classes.inner}>
-          <Tilty max={5} speed={450} glare={true} maxGlare={0.25}>
+          <Tilty max={max} speed={speed} glare={glare} maxGlare={maxGlare}>
             <div className={classes.content_border}>            
               <div className={classes.content}>
                 <Image 
