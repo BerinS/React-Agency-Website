@@ -14,6 +14,12 @@
 }
 
 .links {
+  font-family: "DM Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-size: 14px;
+  color: rgb(117, 117, 117);
+  font-style: normal;
   @media (max-width: var(--mantine-breakpoint-sm)) {
     margin-top: var(--mantine-spacing-lg);
     margin-bottom: var(--mantine-spacing-sm);

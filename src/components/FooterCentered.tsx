@@ -3,30 +3,34 @@ import { ActionIcon, Anchor, Group, Image, Grid } from '@mantine/core';
 import classes from '../css/FooterCentered.module.css';
 import FooterAssetLogo from '../assets/Asset_logo_5.png';
 import { useMediaQuery } from '@mantine/hooks';
+import { Link } from 'react-router';
 
 
 
 const links = [
-  { link: '#', label: 'Početna' },
-  { link: '#', label: 'Kontakt' },
-  { link: '#', label: 'Usluge' },
-  { link: '#', label: 'O nama' },
+  { link: '/', label: 'Početna' },
+  { link: '/Kontakt', label: 'Kontakt' },
+  { link: '/Usluge', label: 'Usluge' },
+  { link: '/#O_nama', label: 'O nama' },
 ];
 
 
 
 export function FooterCentered() {
   const items = links.map((link) => (
-    <Anchor
-      c="dimmed"
-      key={link.label}
-      href={link.link}
-      lh={1}
-      onClick={(event) => event.preventDefault()}
-      size="sm"
-    >
-      {link.label}
-    </Anchor>
+    <Link
+    to={link.link}
+    key={link.label}
+    className={classes.links}
+    style={{ 
+      color: 'dimmed', 
+      textDecoration: 'none',
+      fontSize: 'sm',
+      lineHeight: 1
+    }}
+  >
+    {link.label}
+  </Link>
   ));
 
   const isMobile = useMediaQuery('(max-width: 768px)');
