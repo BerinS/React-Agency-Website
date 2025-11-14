@@ -22,8 +22,9 @@ import {
 import { useMediaQuery } from '@mantine/hooks';
 
 import classes from '../css/FeaturesCards.module.css';
+import { Link } from 'react-router';
 
-const mockdata = [
+const cardData = [
   {
     title: 'Računovodstvo i knjigovodstvo',
     description:
@@ -67,7 +68,7 @@ export function FeaturesCards() {
   const isMobile = useMediaQuery(`(max-width: ${theme.breakpoints.sm})`);
   
   // 3 cards on mobile
-  const displayedFeatures = isMobile ? mockdata.slice(0, 3) : mockdata;
+  const displayedFeatures = isMobile ? cardData.slice(0, 3) : cardData;
 
   const features = displayedFeatures.map((feature) => (
     <Card key={feature.title} shadow="md" radius="md" className={classes.card} padding="xl">
@@ -105,9 +106,11 @@ export function FeaturesCards() {
         justify={'flex-end'}
         mt={'sm'}
       >
+        <Link to="/Usluge" >
         <Button variant='transparent' color='#a6161a' rightSection={<IconChevronRight size={14} />}>
           Detaljan pregled
         </Button>
+        </Link>
       </Flex>
     </Container>
   );

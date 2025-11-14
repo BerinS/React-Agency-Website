@@ -145,14 +145,14 @@ export function HeaderMegaMenu() {
             
             <HoverCard width={600} position="bottom" radius="md" shadow="md" withinPortal>
               <HoverCard.Target>
-                <a href="#" className={classes.link}>
-                  <Center inline>
-                    <Box component="span" mr={5}>
+                <Center inline>
+                  <Box component="span" mr={5}>
+                    <Link to="/Usluge" style={{ textDecoration: 'none', color: 'inherit' }} className={classes.link}>
                       Usluge
-                    </Box>
-                    <IconChevronDown size={16} color={'#a6161a'} />
-                  </Center>
-                </a>
+                    </Link>                      
+                  </Box>
+                  <IconChevronDown size={16} color={'#a6161a'} />
+                </Center>                
               </HoverCard.Target>
 
               <HoverCard.Dropdown style={{ overflow: 'hidden' }}>
@@ -176,7 +176,9 @@ export function HeaderMegaMenu() {
                         Usluge koje Vam pružaju mir i sigurnost
                       </Text>
                     </div>
-                    <Button variant="default">Saznaj više</Button>
+                    <Link to="/Usluge">
+                      <Button variant="default">Saznaj više</Button>
+                    </Link>
                   </Group>
                 </div>
               </HoverCard.Dropdown>

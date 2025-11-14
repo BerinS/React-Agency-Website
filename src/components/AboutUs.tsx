@@ -60,7 +60,11 @@ export function AboutBanner() {
 
               <Text mb="sm">                
                 Osobni i izravan odnos sa klijentima smatramo temeljem kvalitetne suradnje, te težimo izgradnji snažnih profesionalnih veza utemeljenih na povjerenju i razumijevanju.
-                Čvrsto vjerujemo da otvorena komunikacija, te razmjena znanja i iskustava predstavljaju ključ uspješne suradnje. Naše bogato iskustvo u području poslovnih financija omogućava nam da pružimo sveobuhvatne usluge koje uključuju računovodstvene, porezne i poslovne savjete kao garanciju učinkovitog i uspješnog poslovanja.
+                Čvrsto vjerujemo da otvorena komunikacija, te razmjena znanja i iskustava predstavljaju ključ uspješne suradnje. 
+              </Text>
+
+              <Text mb="sm">
+                Naše bogato iskustvo u području poslovnih financija omogućava nam da pružimo sveobuhvatne usluge koje uključuju računovodstvene, porezne i poslovne savjete kao garanciju učinkovitog i uspješnog poslovanja.
               </Text>
             </Grid.Col>
             <Grid.Col span={6}>
