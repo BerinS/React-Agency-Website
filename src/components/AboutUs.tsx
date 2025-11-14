@@ -6,6 +6,7 @@ import {
 } from '@tabler/icons-react';
 import Tilty from 'react-tilty';
 import { useMediaQuery } from '@mantine/hooks';
+import { Link } from 'react-router';
 
 
 const PRIMARY_COL_HEIGHT = '350px';
@@ -63,17 +64,19 @@ export function AboutBanner() {
               </Text>
             </Grid.Col>
             <Grid.Col span={6}>
-              <Button
-                  variant="outline"
-                  color='#6e6e6eff'
-                  size="md"
-                  className={classes.control}
-                  mt={0}                 
-                  radius={"xl"}   
-                  rightSection={icon}  
-                >
-                  Zatražite ponudu
-              </Button>
+              <Link to="/Kontakt">
+                <Button
+                    variant="outline"
+                    color='#6e6e6eff'
+                    size="md"
+                    className={classes.control}
+                    mt={0}                 
+                    radius={"xl"}   
+                    rightSection={icon}  
+                  >
+                    Zatražite ponudu
+                </Button>
+              </Link>
             </Grid.Col>            
           </Grid>
         </SimpleGrid>

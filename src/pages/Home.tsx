@@ -26,9 +26,13 @@ function Home() {
   return (
     <>
       <HeroContentLeft />
-      <FeaturesCards />
+
+      <div id='Usluge'>
+        <FeaturesCards />
+      </div>
+      
       <StatsGroup />
-      <div id='About'>
+      <div id='O_nama'>
         <AboutBanner />
       </div>
       

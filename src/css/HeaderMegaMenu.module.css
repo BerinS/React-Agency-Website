@@ -17,7 +17,7 @@
   color: light-dark(var(--mantine-color-black), var(--mantine-color-white));
   font-family: "DM Sans", sans-serif;
   font-optical-sizing: auto;
-  font-weight: 400;
+  font-weight: 420;
   font-style: normal;
   font-size: var(--mantine-font-size-md);
 
@@ -47,4 +47,17 @@
   margin-top: var(--mantine-spacing-sm);
   padding: var(--mantine-spacing-md) calc(var(--mantine-spacing-md) * 2);
   padding-bottom: var(--mantine-spacing-xl);
+}
+
+
+.mobileDrawer .link {
+  padding: 8px;
+  font-size: 50x; 
+  font-weight: 400; 
+  font-size: larger;
+}
+
+.mobileDrawer .subLink {
+  font-size: 50px;
+  color: #666;
 }

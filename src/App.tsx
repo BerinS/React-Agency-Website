@@ -23,7 +23,7 @@ function App() {
 
           <Routes>
             <Route path='/' element={<Home />}></Route>
-            <Route path='/kontakt' element={<Contact />}></Route>
+            <Route path='/Kontakt' element={<Contact />}></Route>
           </Routes>
 
           <FooterCentered />

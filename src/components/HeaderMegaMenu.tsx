@@ -63,13 +63,50 @@ const mockdata = [
   },
 ];
 
+interface MobileDrawerLinkProps {
+  to: string;
+  children: React.ReactNode;
+  closeDrawer: () => void;
+  className?: string;
+  style?: React.CSSProperties;
+}
+
+const MobileDrawerLink: React.FC<MobileDrawerLinkProps> = ({ 
+  to, 
+  children, 
+  closeDrawer, 
+  className, 
+  style,
+  ...props 
+}) => {
+  const handleClick = () => {
+    closeDrawer(); 
+  };
+
+  return (
+    <Link
+      to={to}
+      onClick={handleClick}
+      className={className}
+      style={style}
+      {...props}
+    >
+      {children}
+    </Link>
+  );
+};
+
 export function HeaderMegaMenu() {
   const [drawerOpened, { toggle: toggleDrawer, close: closeDrawer }] = useDisclosure(false);
   const [linksOpened, { toggle: toggleLinks }] = useDisclosure(false);
   const theme = useMantineTheme();
 
   const links = mockdata.map((item) => (
-    <UnstyledButton className={classes.subLink} key={item.title}>
+    <UnstyledButton 
+      className={classes.subLink} 
+      key={item.title}
+      onClick={closeDrawer} 
+    >
       <Group wrap="nowrap" align="flex-start">
         <ThemeIcon size={34} variant="default" radius="md">
           <item.icon size={22} color={'#a6161a'} />
@@ -90,20 +127,21 @@ export function HeaderMegaMenu() {
     <Box>
       <header className={classes.header}>
         <Group justify="space-between" h="100%">
-          <Image 
-                src={logo} 
-                alt="Your Logo" 
-                w="auto" 
-                h={40} 
-                style={{ paddingLeft: '20px' }} 
-              />
+          <Link to="/">
+            <Image 
+              src={logo} 
+              alt="Your Logo" 
+              w="auto" 
+              h={40} 
+              style={{ paddingLeft: '20px' }} 
+            />
+          </Link>
+          
 
           <Group h="100%" gap={0} visibleFrom="sm">           
-              <a className={classes.link}>
-                <Link to="/"  style={{ textDecoration: 'none', color: 'inherit' }} >
-                  Početna
-                </Link>
-              </a>
+            <Link to="/" style={{ textDecoration: 'none', color: 'inherit' }} className={classes.link}>
+              Početna
+            </Link>
             
             <HoverCard width={600} position="bottom" radius="md" shadow="md" withinPortal>
               <HoverCard.Target>
@@ -143,15 +181,14 @@ export function HeaderMegaMenu() {
                 </div>
               </HoverCard.Dropdown>
             </HoverCard>
-            <a href="#" className={classes.link}>
-              <Link to="/#About" style={{ textDecoration: 'none', color: 'inherit' }}>
-                O nama
-              </Link>              
-            </a>            
+            
+            <Link to="/#O_nama" style={{ textDecoration: 'none', color: 'inherit' }} className={classes.link}>
+              O nama
+            </Link>              
           </Group>
 
           <Group visibleFrom="sm" style={{paddingRight: '15px'}}>
-            <Link to="/kontakt">
+            <Link to="/Kontakt" style={{ textDecoration: 'none', color: 'inherit' }}>
               <Button
                 variant="gradient"
                 gradient={{ from: '#a6161a', to: '#d81010ff' }}  
@@ -170,35 +207,63 @@ export function HeaderMegaMenu() {
         opened={drawerOpened}
         onClose={closeDrawer}
         size="100%"
-        padding="md"
-        title="Navigation"
+        padding="lg"
         hiddenFrom="sm"
         zIndex={1000000}
       >
-        <ScrollArea h="calc(100vh - 80px" mx="-md">
+        <ScrollArea h="calc(100vh - 80px)" mx="-md">
           <Divider my="sm" />
+          <div className={classes.mobileDrawer}>
+            <MobileDrawerLink 
+              to="/" 
+              className={classes.link}
+              style={{ textDecoration: 'none', color: 'inherit' }}
+              closeDrawer={closeDrawer}
+            >
+              Početna
+            </MobileDrawerLink>
+            
+            <UnstyledButton className={classes.link} onClick={toggleLinks}>
+              <Center inline>
+                <Box component="span" mr={5}>
+                  Usluge
+                </Box>
+                <IconChevronDown size={16} color={'#a6161a'} />
+              </Center>
+            </UnstyledButton>
+            
+            <Collapse in={linksOpened}>{links}</Collapse>
+            
+            <MobileDrawerLink 
+              to="/#O_nama" 
+              className={classes.link}
+              style={{ textDecoration: 'none', color: 'inherit' }}
+              closeDrawer={closeDrawer}
+            >
+              O nama
+            </MobileDrawerLink>          
 
-          <a href="#" className={classes.link}>
-            Početna
-          </a>
-          <UnstyledButton className={classes.link} onClick={toggleLinks}>
-            <Center inline>
-              <Box component="span" mr={5}>
-                Usluge
-              </Box>
-              <IconChevronDown size={16} color={'#a6161a'} />
-            </Center>
-          </UnstyledButton>
-          <Collapse in={linksOpened}>{links}</Collapse>
-          <a href="#" className={classes.link}>
-            O nama
-          </a>          
+            <Divider my="sm" />
 
-          <Divider my="sm" />
-
-          <Group justify="center" grow pb="xl" px="md">
-            <Button variant="default">Kontakt</Button>            
-          </Group>
+            <Group justify="center" pb="xl" px="md">            
+              <MobileDrawerLink 
+                to="/Kontakt" 
+                style={{ textDecoration: 'none', color: 'inherit', width: '100%' }}
+                closeDrawer={closeDrawer}
+              >
+                <Button 
+                  radius="xl" 
+                  fullWidth 
+                  variant="gradient"
+                  gradient={{ from: '#a6161a', to: '#d81010ff' }}  
+                  style={{borderRadius: '35px'}} 
+                  size='lg'
+                >
+                  Kontakt
+                </Button>
+              </MobileDrawerLink>                      
+            </Group>
+          </div>
         </ScrollArea>
       </Drawer>
     </Box>

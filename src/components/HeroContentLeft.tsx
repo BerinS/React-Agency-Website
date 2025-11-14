@@ -15,6 +15,7 @@ import bg7Small from '../assets/bg7_small_screen.jpg';
 import bg8Small from '../assets/bg8_small_screen.jpg';
 
 import AssetLogo from '../assets/Asset_logo_4.png';
+import { Link } from 'react-router';
 
 export function HeroContentLeft() {
   const isMobile = useMediaQuery('(max-width: 768px)');
@@ -87,28 +88,33 @@ export function HeroContentLeft() {
                   Naš pristup temelji se na individualnom razumijevanju svakog klijenta.
                 </Text>
 
-                <Button
-                  variant="gradient"
-                  gradient={{ from: '#a6161a', to: '#d81010ff' }}
-                  size="lg"
-                  className={classes.control}
-                  mt={35}
-                  radius={"xl"}
-                >
-                  Kontaktirajte nas
-                </Button>
-                <Button
-                  variant="outline"
-                  color='#ffffffff'
-                  size="lg"
-                  className={classes.control}
-                  mt={35}
-                  ml={10}    
-                  radius={"xl"}   
-                  rightSection={icon}  
-                >
-                  Vidi više
-                </Button>
+                <Link to="/Kontakt">
+                  <Button
+                    variant="gradient"
+                    gradient={{ from: '#a6161a', to: '#d81010ff' }}
+                    size="lg"
+                    className={classes.control}
+                    mt={35}
+                    radius={"xl"}
+                  >
+                    Kontaktirajte nas
+                  </Button>
+                </Link>
+
+                <Link to="/#Usluge">
+                  <Button
+                    variant="outline"
+                    color='#ffffffff'
+                    size="lg"
+                    className={classes.control}
+                    mt={35}
+                    ml={10}    
+                    radius={"xl"}   
+                    rightSection={icon}  
+                  >
+                    Vidi više
+                  </Button>
+                </Link>
               </div>
             </div>
           </Tilty>
