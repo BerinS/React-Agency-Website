@@ -70,6 +70,8 @@ export function ContactUs() {
         </SimpleGrid>
       </Container>
       
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d590.2170945687631!2d18.39487262689573!3d43.85340436864359!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4758c9189fc1c209%3A0x6e036840a3730ac4!2sV93W%2BC2V%2C%20Vilsonovo%20%C5%A1etali%C5%A1te%2010%2C%20Sarajevo%2071000!5e1!3m2!1sen!2sba!4v1763059494750!5m2!1sen!2sba" width="100%" height="600"  loading="lazy"></iframe>
+      
     </div>
   );
 }

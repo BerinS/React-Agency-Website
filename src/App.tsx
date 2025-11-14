@@ -17,7 +17,7 @@ function App() {
 
         
         <AppShell.Main>
-          <Contact />
+          <Home />
           <FooterCentered />
         </AppShell.Main>
        

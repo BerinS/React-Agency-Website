@@ -7,8 +7,6 @@
   background-attachment: fixed;
   background-size: cover;
   padding-top: calc(var(--mantine-spacing-xl) * 4);
-  padding-bottom: calc(var(--mantine-spacing-xl) * 4);
-
   font-family: "DM Sans", sans-serif;
   font-optical-sizing: auto;
   font-weight: 600;
@@ -68,4 +66,9 @@
 
 .control {
   background-color: #a6161a; 
+}
+
+iframe{
+  padding-top: calc(var(--mantine-spacing-xl) * 4);
+  border: none;
 }
