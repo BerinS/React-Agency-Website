@@ -28,7 +28,7 @@ export function HeroContentLeft() {
     ? 'linear-gradient(0deg, rgba(0, 0, 0, 0) 0%, #00000079 80%)' 
     : 'linear-gradient(250deg, rgba(0, 0, 0, 0) 0%, #00000000 80%)';
 
-    // No tilty on phones
+  // No tilty on phones
   let glare : boolean = isMobile ? false : true;
   let maxGlare : number = isMobile ? 0 : 0.3;
   let max : number = isMobile ? 0 : 5;

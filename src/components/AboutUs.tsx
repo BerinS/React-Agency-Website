@@ -4,6 +4,9 @@ import classes from '../css/AboutUs.module.css';
 import {
   IconArrowRight,
 } from '@tabler/icons-react';
+import Tilty from 'react-tilty';
+import { useMediaQuery } from '@mantine/hooks';
+
 
 const PRIMARY_COL_HEIGHT = '350px';
   const icon = <IconArrowRight size={20} />;
@@ -11,6 +14,19 @@ const PRIMARY_COL_HEIGHT = '350px';
 
 export function AboutBanner() {
   const SECONDARY_COL_HEIGHT = `calc(${PRIMARY_COL_HEIGHT} / 2 - var(--mantine-spacing-md) / 2)`;
+
+  const isMobile = useMediaQuery('(max-width: 768px)');
+  
+  const gradient = isMobile 
+    ? 'linear-gradient(0deg, rgba(0, 0, 0, 0) 0%, #00000079 80%)' 
+    : 'linear-gradient(250deg, rgba(0, 0, 0, 0) 0%, #00000000 80%)';
+
+
+  // No tilty on phones
+  let glare : boolean = isMobile ? false : true;
+  let maxGlare : number = isMobile ? 0 : 0.3;
+  let max : number = isMobile ? 0 : 8;
+  let speed : number = isMobile ? 0 : 800;
 
   return (
     <div className={classes.wrapper}>
@@ -25,12 +41,15 @@ export function AboutBanner() {
       </Text>
 
         <SimpleGrid cols={{ base: 1, sm: 2 }} spacing="md">
-           <Image 
-            src={image}
-            h={{ base: 350, sm: 350, md: 400, lg: 480 }}
-            w={{ base: 350, sm: 350, md: 400, lg: 480 }}
-            className={classes.image_logo}
-          />
+           <Tilty max={max} speed={speed} glare={glare} maxGlare={maxGlare}>
+            <Image 
+                src={image}
+                h={{ base: 350, sm: 350, md: 400, lg: 480 }}
+                w={{ base: 350, sm: 350, md: 400, lg: 480 }}
+                className={classes.image_logo}
+            />
+           </Tilty>
+           
           <Grid gutter="md"className={classes.about_content} >
             <Grid.Col>         
               <Text mb="sm">
