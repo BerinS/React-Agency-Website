@@ -26,6 +26,7 @@ import {
   Image,
 } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
+import { Link } from "react-router";
 import classes from '../css/HeaderMegaMenu.module.css';
 import logo from '../assets/Asset_logo_3.png';
 
@@ -97,10 +98,13 @@ export function HeaderMegaMenu() {
                 style={{ paddingLeft: '20px' }} 
               />
 
-          <Group h="100%" gap={0} visibleFrom="sm">
-            <a href="#" className={classes.link}>
-              Početna
-            </a>
+          <Group h="100%" gap={0} visibleFrom="sm">           
+              <a className={classes.link}>
+                <Link to="/"  style={{ textDecoration: 'none', color: 'inherit' }} >
+                  Početna
+                </Link>
+              </a>
+            
             <HoverCard width={600} position="bottom" radius="md" shadow="md" withinPortal>
               <HoverCard.Target>
                 <a href="#" className={classes.link}>
@@ -140,18 +144,22 @@ export function HeaderMegaMenu() {
               </HoverCard.Dropdown>
             </HoverCard>
             <a href="#" className={classes.link}>
-              O nama
+              <Link to="/#About" style={{ textDecoration: 'none', color: 'inherit' }}>
+                O nama
+              </Link>              
             </a>            
           </Group>
 
           <Group visibleFrom="sm" style={{paddingRight: '15px'}}>
-            <Button
+            <Link to="/kontakt">
+              <Button
                 variant="gradient"
                 gradient={{ from: '#a6161a', to: '#d81010ff' }}  
                 style={{borderRadius: '35px'}}
               >
                 Kontakt
               </Button>
+            </Link>            
           </Group>
 
           <Burger opened={drawerOpened} onClick={toggleDrawer} hiddenFrom="sm" />
