@@ -54,7 +54,7 @@ export function AboutBanner() {
           <Grid gutter="md"className={classes.about_content} >
             <Grid.Col>         
               <Text mb="sm">
-                AssetFin pristup temelji se na individualnom pristupu svakom klijentu, uzimajući u obzir specifičnosti njihove djelatnosti i poslovanja. Naš je cilj da kroz dugoročno partnerstvo doprinesemo ostvarenju vaših poslovnih ciljeva.
+                <b>AssetFin</b> pristup temelji se na individualnom pristupu svakom klijentu, uzimajući u obzir specifičnosti njihove djelatnosti i poslovanja. Naš je cilj da kroz dugoročno partnerstvo doprinesemo ostvarenju vaših poslovnih ciljeva.
                 Osiguravamo da naši klijenti dobiju najviše standarde usluga, u skladu s računovodstvenim standardima, zakonskim propisima i najboljim poslovnim praksama.
               </Text>
 
@@ -71,7 +71,7 @@ export function AboutBanner() {
               <Link to="/Kontakt">
                 <Button
                     variant="outline"
-                    color='#6e6e6eff'
+                    color='#a6161a'
                     size="md"
                     className={classes.control}
                     mt={0}                 

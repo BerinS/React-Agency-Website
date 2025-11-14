@@ -25,7 +25,8 @@
   font-optical-sizing: auto;
   font-style: normal;
   padding-bottom: calc(var(--mantine-spacing-xl)*2);
-
+  color: rgb(109, 109, 109) !important;
+  
   &::after {
     content: '';
     display: block;
@@ -43,6 +44,7 @@
   font-optical-sizing: auto;
   font-weight: 500;
   font-style: normal;
+  color: rgb(109, 109, 109);
 }
 
 .image_logo {
