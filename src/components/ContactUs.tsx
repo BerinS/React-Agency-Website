@@ -32,6 +32,7 @@ export function ContactUs() {
               required
               radius="md"
               classNames={{ input: classes.input, label: classes.inputLabel }}
+              disabled
             />
             <TextInput
               label="Ime i prezime"
@@ -39,6 +40,7 @@ export function ContactUs() {
               mt="md"
               radius="md"
               classNames={{ input: classes.input, label: classes.inputLabel }}
+              disabled
             />
             <Textarea
               required
@@ -48,6 +50,7 @@ export function ContactUs() {
               mt="md"
               radius="md"
               classNames={{ input: classes.input, label: classes.inputLabel }}
+              disabled
             />
 
             <Group justify="flex-end" mt="md">              
