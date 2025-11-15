@@ -19,9 +19,6 @@ function App() {
 
         
         <AppShell.Main>
-          
-          
-
           <Routes>
             <Route path='/' element={<Home />}></Route>
             <Route path='/Kontakt' element={<Contact />}></Route>
