@@ -26,37 +26,43 @@ import {
   Image,
 } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
-import { Link } from "react-router";
+import { Link, useNavigate } from "react-router";
 import classes from '../css/HeaderMegaMenu.module.css';
 import logo from '../assets/Asset_logo_3.png';
 
 const mockdata = [
   {
+    id: 'racunovodstvo',
     icon: IconNotebook,
     title: 'Računovodstvo',
     description: 'Kompletno vođenje finansijske evidencije',
   },
   {
+    id: 'savjetovanje',
     icon: IconUserCheck,
     title: 'Poslovno savjetovanje',
     description: 'Strateško planiranje za unapređenje poslovanja',
   },
   {
+    id: 'pdv',
     icon: IconFileAnalytics,
     title: 'PDV evidencija',
     description: 'Upravljanje PDV obavezama i prijave',
   },
   {
+    id: 'izvjestaji',
     icon: IconClipboardData,
     title: 'Finansijski izvještaji',
     description: 'Izrada jasnih finansijskih izvještaja',
   },
   {
+    id: 'registracija',
     icon: IconGavel,
     title: 'Registracija',
     description: 'Registracija pravnih lica i dokumentacija',
   },
   {
+    id: 'place',
     icon: IconCashRegister,
     title: 'Obračun plaća',
     description: 'Obračun plaća u skladu sa zakonodavstvom',
@@ -100,12 +106,44 @@ export function HeaderMegaMenu() {
   const [drawerOpened, { toggle: toggleDrawer, close: closeDrawer }] = useDisclosure(false);
   const [linksOpened, { toggle: toggleLinks }] = useDisclosure(false);
   const theme = useMantineTheme();
+  const navigate = useNavigate();
 
-  const links = mockdata.map((item) => (
+  const handleServiceClick = (serviceId: string) => {
+    navigate(`/Usluge#${serviceId}`);
+    closeDrawer();
+  };
+
+  // Desktop links
+  const desktopLinks = mockdata.map((item) => (
     <UnstyledButton 
       className={classes.subLink} 
       key={item.title}
-      onClick={closeDrawer} 
+      onClick={() => handleServiceClick(item.id)}
+      style={{ cursor: 'pointer' }}
+    >
+      <Group wrap="nowrap" align="flex-start">
+        <ThemeIcon size={34} variant="default" radius="md">
+          <item.icon size={22} color={'#a6161a'} />
+        </ThemeIcon>
+        <div>
+          <Text size="sm" fw={500}>
+            {item.title}
+          </Text>
+          <Text size="xs" c="dimmed">
+            {item.description}
+          </Text>
+        </div>
+      </Group>
+    </UnstyledButton>
+  ));
+
+  // Mobile links
+  const mobileLinks = mockdata.map((item) => (
+    <UnstyledButton 
+      className={classes.subLink} 
+      key={item.title}
+      onClick={() => handleServiceClick(item.id)}
+      style={{ cursor: 'pointer', width: '100%' }}
     >
       <Group wrap="nowrap" align="flex-start">
         <ThemeIcon size={34} variant="default" radius="md">
@@ -163,7 +201,7 @@ export function HeaderMegaMenu() {
                 <Divider my="sm" />
 
                 <SimpleGrid cols={2} spacing={0}>
-                  {links}
+                  {desktopLinks}
                 </SimpleGrid>
 
                 <div className={classes.dropdownFooter}>
@@ -234,7 +272,11 @@ export function HeaderMegaMenu() {
               </Center>
             </UnstyledButton>
             
-            <Collapse in={linksOpened}>{links}</Collapse>
+            <Collapse in={linksOpened}>
+              <div style={{ paddingLeft: '20px' }}>
+                {mobileLinks}
+              </div>
+            </Collapse>
             
             <MobileDrawerLink 
               to="/#O_nama" 
