@@ -62,17 +62,8 @@ export function FooterCentered() {
           </Grid.Col>
           
           <Grid.Col span={{ base: 12, sm: 4 }}>
-            <Group gap="sm" justify={isMobile ? 'center' : 'flex-end'}>
-              <a 
-                href="https://www.linkedin.com/in/samirasurkovic/?originalSubdomain=ba" 
-                target="_blank" 
-                rel="noopener noreferrer"
-              >
-                <ActionIcon size="lg" variant="default" radius="xl">
-                  <IconBrandLinkedin size={18} stroke={1.5} />
-                </ActionIcon>
-              </a>
-              <a href="mailto:samira.surkovic@asset.ba">
+            <Group gap="sm" justify={isMobile ? 'center' : 'flex-end'}>              
+              <a href="mailto:info@asset.ba">
                 <ActionIcon size="lg" variant="default" radius="xl">
                   <IconMail size={18} stroke={1.5} />
                 </ActionIcon>
