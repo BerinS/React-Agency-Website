@@ -14,7 +14,7 @@ export function FaqWithImage() {
             </Title>
              <Accordion chevronPosition="right" defaultValue="pocetak-saradnje" variant="separated">
               <Accordion.Item className={classes.item} value="pocetak-saradnje">
-                <Accordion.Control>Kako započeti saradnju s AssetFin-om?</Accordion.Control>
+                <Accordion.Control>Kako započeti saradnju sa nama?</Accordion.Control>
                 <Accordion.Panel>
                   Saradnju možete započeti kontaktiranjem putem emaila ili telefona kako bismo zakazali uvodni sastanak. 
                   Potrebni su vam osnovni podaci o kompaniji, vrsti djelatnosti i dosadašnjoj finansijskoj dokumentaciji. 

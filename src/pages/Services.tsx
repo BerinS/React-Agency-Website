@@ -1,4 +1,4 @@
-import { Card, Container, SimpleGrid, Text } from "@mantine/core";
+import { Card, Container, SimpleGrid, Space, Text } from "@mantine/core";
 import { IconCashRegister, IconClipboardData, IconFileAnalytics, IconGavel, IconNotebook, IconUserCheck } from "@tabler/icons-react";
 import classes from '../css/FeaturesCards2.module.css';
 import { useEffect, useRef, useState } from "react";
@@ -102,18 +102,18 @@ function Services(){
     </Card>
   ));
 
-  return(
-    <>
-      <Container size={'lg'} my={120}>
+  return(  
+    <div className={classes.wrapper}>
+      <Container size={'lg'}>
         <SimpleGrid
           cols={{ base: 1, sm: 2 }}
           spacing={{ base: 10, sm: 'xl' }}
-          verticalSpacing={{ base: 'md', sm: 'xl' }}
-        >
+          verticalSpacing={{ base: 'md', sm: 'xl' }}          
+        >          
           {features}
         </SimpleGrid>
-      </Container>      
-    </>
+      </Container>  
+    </div>   
   )
 }
 
