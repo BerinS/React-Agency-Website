@@ -1,6 +1,4 @@
-import { IconBrandInstagram, IconBrandTwitter, IconBrandYoutube } from '@tabler/icons-react';
 import {
-  ActionIcon,
   Button,
   Container,
   Group,
@@ -13,15 +11,8 @@ import {
 import { ContactIconsList } from './ContactIcons';
 import classes from '../css/ContactUs.module.css';
 
-const social = [IconBrandTwitter, IconBrandYoutube, IconBrandInstagram];
 
-export function ContactUs() {
-  const icons = social.map((Icon, index) => (
-    <ActionIcon key={index} size={28} className={classes.social} variant="transparent">
-      <Icon size={22} stroke={1.5} />
-    </ActionIcon>
-  ));
-
+export function ContactUs() {  
   return (
     <div className={classes.wrapper}>
       <Container size={'xl'}>
@@ -32,8 +23,6 @@ export function ContactUs() {
               Pošaljite nam upit i potrudit ćemo se da odgovorimo u najkraćem mogućem roku.
             </Text>
             <ContactIconsList />
-
-            <Group mt="xl">{icons}</Group>
           </div>
 
           <div className={classes.form}>
@@ -61,10 +50,8 @@ export function ContactUs() {
               classNames={{ input: classes.input, label: classes.inputLabel }}
             />
 
-            <Group justify="flex-end" mt="md">
-              <Button className={classes.control} radius="xl" size='md'>
-                Pošalji
-              </Button>
+            <Group justify="flex-end" mt="md">              
+              <Button variant="filled" size="md" radius="xl" className={classes.control}>Pošalji</Button>
             </Group>
           </div>
         </SimpleGrid>

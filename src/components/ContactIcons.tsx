@@ -36,4 +36,3 @@ export function ContactIconsList() {
   const items = contact_data.map((item, index) => <ContactIcon key={index} {...item} />);
   return <Stack>{items}</Stack>;
 }
-
