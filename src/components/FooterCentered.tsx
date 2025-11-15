@@ -1,4 +1,4 @@
-import { IconBrandLinkedin, IconMail } from '@tabler/icons-react';
+import { IconMail } from '@tabler/icons-react';
 import { ActionIcon, Group, Image, Grid } from '@mantine/core';
 import classes from '../css/FooterCentered.module.css';
 import FooterAssetLogo from '../assets/Asset_logo_5.png';
