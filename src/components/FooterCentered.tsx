@@ -1,5 +1,5 @@
-import { IconBrandInstagram, IconBrandLinkedin, IconBrandTwitter, IconBrandYoutube, IconMail } from '@tabler/icons-react';
-import { ActionIcon, Anchor, Group, Image, Grid } from '@mantine/core';
+import { IconBrandLinkedin, IconMail } from '@tabler/icons-react';
+import { ActionIcon, Group, Image, Grid } from '@mantine/core';
 import classes from '../css/FooterCentered.module.css';
 import FooterAssetLogo from '../assets/Asset_logo_5.png';
 import { useMediaQuery } from '@mantine/hooks';

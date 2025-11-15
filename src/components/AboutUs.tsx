@@ -1,4 +1,4 @@
-import { Container, Grid, SimpleGrid, Skeleton, Title, Text, Image, Button } from '@mantine/core';
+import { Container, Grid, SimpleGrid, Title, Text, Image, Button } from '@mantine/core';
 import image from '../assets/About image.png';
 import classes from '../css/AboutUs.module.css';
 import {
@@ -9,20 +9,13 @@ import { useMediaQuery } from '@mantine/hooks';
 import { Link } from 'react-router';
 
 
-const PRIMARY_COL_HEIGHT = '350px';
-  const icon = <IconArrowRight size={20} />;
+const icon = <IconArrowRight size={20} />;
 
 
 export function AboutBanner() {
-  const SECONDARY_COL_HEIGHT = `calc(${PRIMARY_COL_HEIGHT} / 2 - var(--mantine-spacing-md) / 2)`;
 
   const isMobile = useMediaQuery('(max-width: 768px)');
   
-  const gradient = isMobile 
-    ? 'linear-gradient(0deg, rgba(0, 0, 0, 0) 0%, #00000079 80%)' 
-    : 'linear-gradient(250deg, rgba(0, 0, 0, 0) 0%, #00000000 80%)';
-
-
   // No tilty on phones
   let glare : boolean = isMobile ? false : true;
   let maxGlare : number = isMobile ? 0 : 0.3;

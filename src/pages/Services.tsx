@@ -1,4 +1,4 @@
-import { Card, Container, SimpleGrid, Space, Text } from "@mantine/core";
+import { Card, Container, SimpleGrid, Text } from "@mantine/core";
 import { IconCashRegister, IconClipboardData, IconFileAnalytics, IconGavel, IconNotebook, IconUserCheck } from "@tabler/icons-react";
 import classes from '../css/FeaturesCards2.module.css';
 import { useEffect, useRef, useState } from "react";

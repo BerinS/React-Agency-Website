@@ -17,7 +17,6 @@ function App() {
           <HeaderMegaMenu />
         </AppShell.Header>
 
-        
         <AppShell.Main>
           <Routes>
             <Route path='/' element={<Home />}></Route>

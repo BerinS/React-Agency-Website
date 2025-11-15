@@ -22,7 +22,6 @@ import {
   Text,
   ThemeIcon,
   UnstyledButton,
-  useMantineTheme,
   Image,
 } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
@@ -105,7 +104,6 @@ const MobileDrawerLink: React.FC<MobileDrawerLinkProps> = ({
 export function HeaderMegaMenu() {
   const [drawerOpened, { toggle: toggleDrawer, close: closeDrawer }] = useDisclosure(false);
   const [linksOpened, { toggle: toggleLinks }] = useDisclosure(false);
-  const theme = useMantineTheme();
   const navigate = useNavigate();
 
   const handleServiceClick = (serviceId: string) => {

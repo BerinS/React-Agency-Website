@@ -45,9 +45,6 @@
 .social {
   color:#a6161a;
 
-  @mixin hover {
-    color: var(--mantine-color-blue-1);
-  }
 }
 
 .input {
