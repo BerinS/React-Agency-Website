@@ -2,7 +2,7 @@
 
 .wrapper {
   padding-top: calc(var(--mantine-spacing-xl));
-  padding-bottom: calc(var(--mantine-spacing-xl) * 5);
+  padding-bottom: calc(var(--mantine-spacing-xl) * 4);
 }
 
 
@@ -46,8 +46,3 @@
   font-style: normal;
   color: rgb(109, 109, 109);
 }
-
-.image_logo {
-
-}
-

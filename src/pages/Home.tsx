@@ -2,6 +2,7 @@ import HeroContentLeft from '../components/HeroContentLeft';
 import FeaturesCards from '../components/FeaturesCards';
 import StatsGroup from '../components/StatsGroup';
 import AboutBanner from '../components/AboutUs';
+import FaqWithImage from '../components/FaqWithImage';
 import { useEffect, useLayoutEffect } from 'react';
 import { useLocation } from 'react-router';
 
@@ -35,6 +36,8 @@ function Home() {
       <div id='O_nama'>
         <AboutBanner />
       </div>
+
+      <FaqWithImage />
       
     </>    
   )
