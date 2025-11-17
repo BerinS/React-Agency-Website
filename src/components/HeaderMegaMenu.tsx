@@ -40,31 +40,31 @@ const mockdata = [
     id: 'savjetovanje',
     icon: IconUserCheck,
     title: 'Poslovno savjetovanje',
-    description: 'Strateško planiranje za unapređenje poslovanja',
+    description: 'Stručna analiza poslovnih procesa za unapređenje poslovanja',
   },
   {
     id: 'pdv',
     icon: IconFileAnalytics,
     title: 'PDV evidencija',
-    description: 'Upravljanje PDV obavezama i prijave',
+    description: 'Vođenje evidencije PDV obveznika u skladu sa Zakonom o PDV-u BiH',
   },
   {
     id: 'izvjestaji',
     icon: IconClipboardData,
     title: 'Finansijski izvještaji',
-    description: 'Izrada jasnih finansijskih izvještaja',
+    description: 'Izrada jasnih godišnjih finansijskih izvještaja',
   },
   {
     id: 'registracija',
     icon: IconGavel,
     title: 'Registracija',
-    description: 'Registracija pravnih lica i dokumentacija',
+    description: 'Administrativna podrška pri osnivanju pravnih i fizičkih lica',
   },
   {
     id: 'place',
     icon: IconCashRegister,
     title: 'Obračun plaća',
-    description: 'Obračun plaća u skladu sa zakonodavstvom',
+    description: 'Obračun neto i bruto plaća u skladu sa zakonodavstvom FBiH i RS',
   },
 ];
 
