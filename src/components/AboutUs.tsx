@@ -30,8 +30,8 @@ export function AboutBanner() {
       </Title>
 
       <Text c="dimmed" className={classes.description} ta="center" mt="md">
-        AssetFin - Računovodstvena agencija specijalizirana za kompletne 
-                  računovodstvene usluge, knjigovodstvo te poslovno i poresko savjetovanje. Vaš partner za finansijski uspjeh.
+        <b>AssetFin</b> pristup temelji se na individualnom pristupu svakom klijentu, uzimajući u obzir
+        specifičnosti njihove djelatnosti i poslovanja.
       </Text>
 
         <SimpleGrid cols={{ base: 1, sm: 2 }} spacing="md">
@@ -47,17 +47,22 @@ export function AboutBanner() {
           <Grid gutter="md"className={classes.about_content} >
             <Grid.Col>         
               <Text mb="sm">
-                <b>AssetFin</b> pristup temelji se na individualnom pristupu svakom klijentu, uzimajući u obzir specifičnosti njihove djelatnosti i poslovanja. Naš je cilj da kroz dugoročno partnerstvo doprinesemo ostvarenju vaših poslovnih ciljeva.
-                Osiguravamo da naši klijenti dobiju najviše standarde usluga, u skladu s računovodstvenim standardima, zakonskim propisima i najboljim poslovnim praksama.
+                Naš je cilj da kroz dugoročno partnerstvo
+                doprinesemo ostvarenju vaših poslovnih ciljeva. Osiguravamo da naši klijenti dobiju najviše
+                standarde usluga, u skladu s računovodstvenim standardima, zakonskim propisima i najboljim
+                poslovnim praksama.
               </Text>
 
               <Text mb="sm">                
-                Osobni i izravan odnos sa klijentima smatramo temeljem kvalitetne suradnje, te težimo izgradnji snažnih profesionalnih veza utemeljenih na povjerenju i razumijevanju.
-                Čvrsto vjerujemo da otvorena komunikacija, te razmjena znanja i iskustava predstavljaju ključ uspješne suradnje. 
+                Osobni i izravan odnos sa klijentima smatramo temeljem kvalitetne suradnje, te težimo izgradnji
+                snažnih profesionalnih veza utemeljenih na povjerenju i razumijevanju. Čvrsto vjerujemo da
+                otvorena komunikacija, te razmjena znanja i iskustava predstavljaju ključ uspješne suradnje. 
               </Text>
 
               <Text mb="sm">
-                Naše bogato iskustvo u području poslovnih financija omogućava nam da pružimo sveobuhvatne usluge koje uključuju računovodstvene, porezne i poslovne savjete kao garanciju učinkovitog i uspješnog poslovanja.
+                Naše bogato iskustvo u području poslovnih finansija omogućava nam da pružimo sveobuhvatne
+                usluge koje uključuju računovodstvene, porezne i poslovne savjete kao garanciju učinkovitog i
+                uspješnog poslovanja.
               </Text>
             </Grid.Col>
             <Grid.Col span={6}>

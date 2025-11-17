@@ -13,12 +13,12 @@ const data = [
   },
   {
     title: 'Zadovoljnih klijenata',
-    stats: '200',
-    description: 'Stotine zadovoljnih klijenata koji nam vjeruju',
+    stats: '30',
+    description: 'Desetine zadovoljnih klijenata koji nam vjeruju',
   },
   {
     title: 'Ušteđenih sati',
-    stats: '50,000',
+    stats: '10,000',
     description: 'Klijentima smo omogućili da se posvete suštini svog poslovanja',
   },
 ];
