@@ -29,23 +29,23 @@ const cardData = [
     id: 'racunovodstvo',
     title: 'Računovodstvo i knjigovodstvo',
     description:
-      'Kompletno vođenje finansijske evidencije. Obuhvatamo sve od redovne knjigovodstvene administracije do sastavljanja finansijskih izvještaja za pravodobno i precizno praćenje poslovanja.',
+      'Pružamo sveobuhvatno vođenje finansijskih evidencija. Obuhvatamo sve poslovne događaje, od redovne knjigovodstvene administracije do sastavljanja finansijskih izvještaja za pravovremeno i precizno praćenje poslovanja. Uvijek znate gdje ste, kako poslujete i kuda idete.',
     icon: IconNotebook,
   },
   {
     id: 'savjetovanje',
     title: 'Poslovno savjetovanje',
     description:
-      'Strateško planiranje i stručni savjeti za unapređenje vašeg poslovanja. Analiziramo vašu finansijsku poziciju i pružamo konkretne preporuke za ostvarenje dugoročnih ciljeva.',
+      'Osim usluge vođenja računovodstva i knjigovodstva, područje našeg djelovanja smo proširili i na poslovno savjetovanje iz oblasti poreza, računovodstva i finansija, online poslovnu podršku i davanje stručnih savjeta za unapređenje vašeg poslovanja.',
     icon: IconUserCheck,
   },
   {
-    id: 'pdv',
-    title: 'PDV evidencija i obračun',
+    id: 'place',
+    title: 'Obračun plaća',
     description:
-      'Specijalizovano upravljanje PDV obavezama kroz precizan obračun i pravovremene prijave, uz garanciju potpune zakonske usklađenosti.',
-    icon: IconFileAnalytics,
-  },
+      'Obračun plaća uz potpunu usklađenost sa radnim i poreskim zakonodavstvom. Usluga obuhvata obračun svih doprinosa, poreza i podnošenje obrazaca nadležnim poreskim ispostavama.',
+    icon: IconCashRegister,
+  },  
   {
     id: 'izvjestaji',
     title: 'Finansijski izvještaji',
@@ -57,16 +57,16 @@ const cardData = [
     id: 'registracija',
     title: 'Registracija djelatnosti',
     description:
-      'Registraciji pri osnivanju pravnih lica, uključujući pripremu dokumentacije i savjetovanje o optimalnom obliku poslovanja za vaše potrebe.',
+      'Asistencija pri registraciji i osnivanju pravnih lica, uključujući pripremu dokumentacije i savjetovanje o optimalnom obliku poslovanja za vaše potrebe.',
     icon: IconGavel,
   },
   {
-    id: 'place',
-    title: 'Obračun plaća',
+    id: 'pdv',
+    title: 'PDV evidencija i obračun',
     description:
-      'Stručan obračun plaća uz potpunu usklađenost sa radnim i poreskim zakonodavstvom. Usluga obuhvata obračun svih doprinosa, poreza i podnošenje izvještaja nadležnim organima.',
-    icon: IconCashRegister,
-  },
+      'Priprema i podnošenje PDV prijave, uz obavezne e-KIF i e-KUF evidencije u skladu sa propisanim rokovima.',
+    icon: IconFileAnalytics,
+  },  
 ];
 
 export function FeaturesCards() {
@@ -110,11 +110,14 @@ export function FeaturesCards() {
       </Group>
       
       <Title order={2} className={classes.title} ta="center" mt="sm">
-        Usluge koje vam pružaju mir i sigurnost
+        Poslovne usluge koje donose sigurnost i rast
       </Title>
 
       <Text c="dimmed" className={classes.description} ta="center" mt="md">
-        Oslobodite se briga financijske administracije uz naše sveobuhvatne računovodstvene usluge. Fokusirajte se na rast svog poslovanja dok mi brinemo o vašim knjigama.
+        Prepustite nam finansijsku administraciju i posvetite se onome što zaista pokreće vaš
+        biznis. Naše profesionalne računovodstvene usluge štede vaše vrijeme,
+        smanjuju rizik i osiguravaju potpunu usklađenost sa propisima.
+        Vi gradite uspjeh, dok mi čuvamo vaše finansije.
       </Text>
 
       <SimpleGrid cols={{ base: 1, md: 3 }} spacing="xl" mt={50}>
