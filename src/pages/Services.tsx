@@ -14,7 +14,7 @@ function Services(){
       id: 'racunovodstvo',
       title: 'Računovodstvo i knjigovodstvo',
       description:
-        'Kompletno vođenje finansijske evidencije u skladu sa Zakonom o računovodstvu i računovodstvenim standardima BiH. Obuhvata redovno knjigovodstvo, evidenciju poslovnih događaja, vođenje glavne knjige i pomoćnih evidencija. Osiguravamo tačnost i pravovremenost podataka za potrebe upravljanja i zakonske obaveze.',
+        'Kompletno preuzimamo vođenje finansijske evidencije u skladu sa Zakonom o računovodstvu i reviziji i međunarodnim računovodstvenim standardima. Naše usluge obuhvataju ažurno knjigovodstvo, evidentiranje svih poslovnih događaja, vođenje glavne knjige i pomoćnih evidencija. Osiguravamo tačne i pravovremene informacije koje vam pomažu u donošenju kvalitetnih poslovnih odluka i ispunjavanju svih zakonskih obaveza.',
       icon: IconNotebook,
     },
     {
@@ -28,28 +28,28 @@ function Services(){
       id: 'pdv',
       title: 'PDV evidencija i obračun',
       description:
-        'Vođenje evidencije PDV obveznika u skladu sa Zakonom o PDV-u BiH. Obračunavamo mjesečne PDV obaveze, pripremamo PDV prijave i osiguravamo pravovremeno podnošenje nadležnim poreskim organima. Vođenje Knjige ulaznih i izlaznih faktura (KUF/KIF). Pratimo promjene u regulativi i osiguravamo usklađenost sa zakonskim propisima.',
+        'Vođenje računovodstvenih evidencije PDV obveznika u skladu sa Zakonom o PDV-u BiH. Obračunavamo mjesečne PDV obaveze, pripremamo PDV prijave uz obavezne e-KIF i e-KUF evidencije i osiguravamo pravovremeno podnošenje obrazaca. Pratimo promjene u regulativi i osiguravamo usklađenost sa zakonskim propisima.',
       icon: IconFileAnalytics,
     },
     {
       id: 'izvjestaji',
       title: 'Finansijski izvještaji',
       description:
-        'Izrada godišnjih finansijskih izvještaja. Obuhvata bilans stanja, bilans uspjeha, izvještaj o tokovima gotovine i bilješke uz finansijske izvještaje. Pripremamo izvještaje za potrebe uprave i vlasnika, kao i za ispunjenje svih zakonskih obaveza prema poreskim organima i regulatorima tržišta kapitala.',
+        'Izrada godišnjih finansijskih izvještaja. Obuhvata set finansijskih izvještaja koji uključuje bilans stanja, bilans uspjeha, izvještaj o tokovima gotovine, bilješke uz finansijske izvještaje i ostali izvještaji za Finansijsko–informatičku agenciju. Pripremamo izvještaje za potrebe uprave i vlasnika, kao i za ispunjenje svih zakonskih obaveza.',
       icon: IconClipboardData,
     },
     {
       id: 'registracija',
       title: 'Registracija djelatnosti',
       description:
-        'Pravna i administrativna podrška pri osnivanju pravnih i fizičkih lica (samostalnih preduzetnika), te registraciji djelatnosti. Uključuje pripremu osnivačkih akata, savjetovanje o optimalnom obliku poslovanja i pomoć pri prijavi u nadležne registre. Pružamo informacije o proceduralnim obavezama prema privrednim i sudskim registrima BiH.',
+        'Administrativna podrška pri osnivanju pravnih i fizičkih lica (samostalnih preduzetnika), te registraciji djelatnosti. Uključuje pripremu zahtjeva za registraciju, savjetovanje o optimalnom obliku poslovanja i pomoć pri prijavi u nadležne registre. Pružamo informacije o proceduralnim obavezama prema poreskim i općinskim uredima.',
       icon: IconGavel,
     },
     {
       id: 'place',
       title: 'Obračun plaća',
       description:
-        'Obračun neto i bruto plaća uz poštovanje odredbi Zakona o radu i poreskog zakonodavstva BiH. Obuhvata obračun poreza i doprinosa, pripremu platnih listića i mjesečno podnošenje obaveznih izvještaja nadležnim institucijama.',
+        'Obračun neto i bruto plaća uz poštovanje odredbi Zakona o radu i poreskog zakonodavstva FBiH i RS. Obuhvata obračun poreza i doprinosa, pripremu platnih lista i mjesečno podnošenje obaveznih obrazaca nadležnim poreskim nadležnim institucijama.',
       icon: IconCashRegister,
     },
   ];
