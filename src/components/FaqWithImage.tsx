@@ -14,47 +14,53 @@ export function FaqWithImage() {
             </Title>
              <Accordion chevronPosition="right" defaultValue="pocetak-saradnje" variant="separated">
               <Accordion.Item className={classes.item} value="pocetak-saradnje">
-                <Accordion.Control>Kako započeti saradnju sa nama?</Accordion.Control>
+                <Accordion.Control>
+                  Šta je osnovica za obračun doprinosa za radni odnos na pola radnog vremena?
+                </Accordion.Control>
                 <Accordion.Panel>
-                  Saradnju možete započeti kontaktiranjem putem emaila ili telefona kako bismo zakazali uvodni sastanak. 
-                  Potrebni su vam osnovni podaci o kompaniji, vrsti djelatnosti i dosadašnjoj finansijskoj dokumentaciji. 
-                  Nakon analize vaših potreba, pripremamo ponudu usluga prilagođenu specifičnostima vašeg poslovanja.
+                  Najniža osnovica je najniža bruto plaća za pola radnog vremena (ili stvarna bruto plaća ako je ona veća).
                 </Accordion.Panel>
               </Accordion.Item>
 
               <Accordion.Item className={classes.item} value="potrebna-dokumentacija">
-                <Accordion.Control>Koju dokumentaciju trebam dostaviti za računovodstvene usluge?</Accordion.Control>
+                <Accordion.Control>
+                  Koji je maksimalan broj sati koji radnik može imati u toku jednog mjeseca?
+                </Accordion.Control>
                 <Accordion.Panel>
-                  Osnovna dokumentacija uključuje: osnivački akt, rješenje o registraciji, PDV identifikacioni broj (ako ste obveznik), 
-                  ugovore s dobavljačima i klijentima, bankovne izvode, fakture (ulazne i izlazne), te ostale finansijske dokumente. 
-                  Precizan spisak dostavljamo nakon upoznavanja sa specifičnostima vašeg poslovanja.
+                  Broj radnih dana u mjesecu × broj sati na koje je dnevno radnik prijavljen u Poreznoj upravi.
                 </Accordion.Panel>
               </Accordion.Item>
             
               <Accordion.Item className={classes.item} value="rokovi-prijava">
-                <Accordion.Control>Koji su rokovi za podnošenje poreskih prijava?</Accordion.Control>
+                <Accordion.Control>
+                  Koja je mogućnost korištenja neiskorištenog godišnjeg odmora prelaskom kod drugog poslodavca?
+                </Accordion.Control>
                 <Accordion.Panel>
-                  PDV prijave se podnose do 15. u mjesecu za prethodni mjesec. Godišnji porez na dobit prijavljuje se do 31. marta za prethodnu godinu. 
-                  Obračun poreza po odbitku podnosi se do kraja narednog mjeseca. Mi osiguravamo pravovremenu pripremu i podnošenje svih prijava, 
-                  uz prethodno odobrenje od vas.
+                  Ako će se radnik zaposliti kod drugog poslodavca u roku od 15 dana od dana prekida
+                  rada kod bivšeg poslodavca, na osnovu potvrde o iskorištenim danima godišnjeg odmora isti
+                  može ostatak dana koristiti kod novog poslodavca.
                 </Accordion.Panel>
               </Accordion.Item>
 
               <Accordion.Item className={classes.item} value="cjenovnik-usluga">
-                <Accordion.Control>Kako se formira cijena vaših usluga?</Accordion.Control>
+                <Accordion.Control>
+                  Ako primimo račun za godišnji obračun hostinga od firme iz Hrvatske, da li treba obračunati PDV? Može li se taj PDV odbiti?
+                </Accordion.Control>
                 <Accordion.Panel>
-                  Cijena ovisi o obimu poslovanja, broju zaposlenih, kompleksnosti djelatnosti i opsegu traženih usluga. 
-                  Nakon analize vaših potreba, dajemo preciznu ponudu s fiksnom mjesečnom tarifom koja uključuje sve dogovorene usluge. 
-                  Nema skrivenih troškova - sve je transparentno definirano u ugovoru o saradnji.
+                  Da, mora se obračunati izlazni PDV po stopi od 17%, jer je to usluga oporeziva u
+                  mjestu primaoca. Ako se hosting koristi za oporezivu djelatnost, PDV je odbitni i ide u polje 41
+                  PDV prijave.
                 </Accordion.Panel>
               </Accordion.Item>
 
               <Accordion.Item className={classes.item} value="finansijski-izvjestaji">
-                <Accordion.Control>Kada se moraju sastaviti godišnji finansijski izvještaji?</Accordion.Control>
+                <Accordion.Control>Poduzeće ulaže u iznajmljeni prostor koji je u vlasništvu drugog pravnog lica.
+                  Kako ispravno knjižiti ovo ulaganje i koje uvjete treba zadovoljiti da bi imali pravo na odbitak
+                  ulaznog PDV-a?
+                </Accordion.Control>
                 <Accordion.Panel>
-                  Godišnji finansijski izvještaji moraju biti sastavljeni u roku od 4 mjeseca od završetka finansijske godine, 
-                  odnosno do 30. aprila za prethodnu kalendarsku godinu. Izvještaji se dostavljaju nadležnoj instituciji za statistiku 
-                  i poreskoj upravi. Mi osiguravamo pravovremenu pripremu izvještaja u skladu sa važećim računovodstvenim standardima BiH.
+                  Ulaganje se iskazuje kao ulaganje na tuđim objektima (konto 0211) i imate pravo na
+                  odbitak ulaznog poreza ako unajmljeni prostor koristite za oporezive svrhe.
                 </Accordion.Panel>
               </Accordion.Item>
             </Accordion>
@@ -64,7 +70,7 @@ export function FaqWithImage() {
                 src={image}
                 h={{ base: 350, sm: 350, md: 400, lg: 440 }}
                 w={{ base: 350, sm: 350, md: 400, lg: 440 }}
-                style={{paddingLeft: '30px' , paddingTop: '10px'}}
+                style={{paddingLeft: '30px' , paddingTop: '20px'}}
             />            
           </Grid.Col>
         </Grid>
