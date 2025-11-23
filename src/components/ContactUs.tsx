@@ -13,9 +13,13 @@ import classes from '../css/ContactUs.module.css';
 import emailjs from '@emailjs/browser';
 import { useState, type ChangeEvent } from 'react';
 
-
 export function ContactUs() {  
   const [formData, setFormData] = useState({
+    email: '',
+    name: '',
+    message: ''
+  });
+  const [errors, setErrors] = useState({
     email: '',
     name: '',
     message: ''
@@ -28,10 +32,59 @@ export function ContactUs() {
       ...prev,
       [id]: value
     }));
+    // lears error when typing starts
+    if (errors[id as keyof typeof errors]) {
+      setErrors(prev => ({
+        ...prev,
+        [id]: ''
+      }));
+    }
+  };
+
+  const validateForm = () => {
+    const newErrors = {
+      email: '',
+      name: '',
+      message: ''
+    };
+
+    let isValid = true;
+
+    // Email validation
+    if (!formData.email) {
+      newErrors.email = 'Email je obavezan';
+      isValid = false;
+    } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
+      newErrors.email = 'Email nije validan';
+      isValid = false;
+    }
+
+    if (!formData.name.trim()) {
+      newErrors.name = 'Ime je obavezno';
+      isValid = false;
+    }
+
+    // text validation
+    if (!formData.message.trim()) {
+      newErrors.message = 'Poruka je obavezna';
+      isValid = false;
+    } else if (formData.message.trim().length < 10) {
+      newErrors.message = 'Poruka mora imati najmanje 10 karaktera';
+      isValid = false;
+    }
+
+    setErrors(newErrors);
+    return isValid;
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    
+    // validate before submission
+    if (!validateForm()) {
+      return;
+    }
+
     setIsLoading(true);
 
     try {
@@ -39,7 +92,7 @@ export function ContactUs() {
         name: formData.name,      
         email: formData.email,     
         message: formData.message, 
-        time: new Date().toLocaleString() 
+        time: new Date().toLocaleString('bs-BA') 
       };
 
       await emailjs.send(
@@ -53,11 +106,17 @@ export function ContactUs() {
         name: '',
         message: ''
       });
+      
+      setErrors({
+        email: '',
+        name: '',
+        message: ''
+      });
 
       alert('Poruka je uspješno poslana.');
     } catch (error) {
       console.error('Error sending email:', error);
-      alert('Došlo je do greške.');
+      alert('Došlo je do greške pri slanju poruke. Molimo pokušajte ponovo.');
     } finally {
       setIsLoading(false);
     }
@@ -78,28 +137,30 @@ export function ContactUs() {
           <form onSubmit={handleSubmit} className={classes.form} id='form'>
             <TextInput
               label="Email"
-              placeholder="..."
+              placeholder="Email adresa"
               required
               radius="md"
               classNames={{ input: classes.input, label: classes.inputLabel }}
               id='email'
               value={formData.email}
               onChange={handleInputChange}
+              error={errors.email}
             />
             <TextInput
               label="Ime i prezime"
-              placeholder="..."
+              placeholder="Vaše ime i prezime"
               mt="md"
               radius="md"
               classNames={{ input: classes.input, label: classes.inputLabel }}
               id='name'
               value={formData.name}
               onChange={handleInputChange}
+              error={errors.name}
             />
             <Textarea
               required
               label="Vaša poruka"
-              placeholder="..."
+              placeholder="Sadržaj poruke..."
               minRows={4}
               mt="md"
               radius="md"
@@ -107,6 +168,7 @@ export function ContactUs() {
               id='message'
               value={formData.message}
               onChange={handleInputChange}
+              error={errors.message}
             />
 
             <Group justify="flex-end" mt="md">              
