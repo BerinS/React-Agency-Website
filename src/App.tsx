@@ -6,8 +6,18 @@ import { HeaderMegaMenu } from './components/HeaderMegaMenu';
 import { MantineProvider, AppShell  } from '@mantine/core';
 import {FooterCentered} from './components/FooterCentered';
 import { Route, Routes } from 'react-router';
+import emailjs from '@emailjs/browser';
+
 
 function App() {
+  emailjs.init({
+    publicKey: 'B_GwZf5OhKALimSOO',
+    blockHeadless: true,
+    limitRate: {
+      throttle: 10000, 
+    },
+  });
+
   return (
     <MantineProvider>
        

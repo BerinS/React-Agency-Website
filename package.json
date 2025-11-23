@@ -10,6 +10,7 @@
     "preview": "vite preview --host"
   },
   "dependencies": {
+    "@emailjs/browser": "^4.4.1",
     "@mantine/carousel": "^8.3.6",
     "@mantine/charts": "^8.3.6",
     "@mantine/code-highlight": "^8.3.6",
