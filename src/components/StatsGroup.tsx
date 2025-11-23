@@ -13,7 +13,7 @@ const data = [
   },
   {
     title: 'Zadovoljnih klijenata',
-    stats: '30',
+    stats: '100',
     description: 'Desetine zadovoljnih klijenata koji nam vjeruju',
   },
   {
