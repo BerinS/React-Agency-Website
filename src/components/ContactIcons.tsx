@@ -1,4 +1,4 @@
-import { IconAt, IconMapPin, IconPhone, IconSun } from '@tabler/icons-react';
+import { IconAt, IconMapPin, IconSun } from '@tabler/icons-react';
 import { Box, Stack, Text } from '@mantine/core';
 import classes from '../css/ContactIcons.module.css';
 
@@ -27,7 +27,6 @@ function ContactIcon({ icon: Icon, title, description, ...others }: ContactIconP
 
 const contact_data = [
   { title: 'Email', description: 'info@asset.ba', icon: IconAt },
-  { title: 'Telefon', description: '+387 61 864 312', icon: IconPhone },
   { title: 'Adresa', description: 'Vilsonovo šetalište 10, Sarajevo', icon: IconMapPin },
   { title: 'Radno vrijeme', description: '09:00 – 17:00 ', icon: IconSun },
 ];
